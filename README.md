@@ -24,5 +24,5 @@ A content-based Movie Recommendation System built using Python and popular data 
 
 ---
 
-## 📂 Project Structure
+
 
