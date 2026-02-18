@@ -3,7 +3,24 @@ import pickle
 import streamlit as st
 import pandas as pd
 import requests
+import gdown
 
+
+similarity_file_id = "1y-CwNmDp9vuBjB9CHYXtJJrbhI_uiI-v"
+similarity_url = f"https://drive.google.com/uc?id={similarity_file_id}"
+
+if not os.path.exists("similarity.pkl"):
+    print("Downloading similarity.pkl...")
+    gdown.download(similarity_url, "similarity.pkl", quiet=False)
+
+
+
+credits_file_id = "1XW_nrJyfS00y-MeedeQkxbJsA4EF8isb"
+credits_url = f"https://drive.google.com/uc?id={credits_file_id}"
+
+if not os.path.exists("tmdb_5000_credits.csv"):
+    print("Downloading credits file...")
+    gdown.download(credits_url, "tmdb_5000_credits.csv", quiet=False)
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
